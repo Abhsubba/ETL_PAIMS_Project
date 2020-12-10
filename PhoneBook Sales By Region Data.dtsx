@@ -1,0 +1,820 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/11/2020 7:32:34 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="KANCHA"
+  DTS:CreatorName="KANCHA\abhir"
+  DTS:DTSID="{FF9504D5-08D1-4EFB-91DF-C7C7D75C70A1}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.71"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{F34E97B2-9260-4972-9CC0-18F9210D265F}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{8641B45F-37E2-4242-919D-D15FA015B23E}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\abhir\Documents\FULL ETL TRAINING\FULL BI\phonebook.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FirstName"
+              DTS:DTSID="{C51641B1-4A12-4908-A43B-25562D4669BD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LastName"
+              DTS:DTSID="{4D7E06C8-8E11-4FA0-81FB-07DBFE504A67}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Address"
+              DTS:DTSID="{0A0053A5-771F-4322-8A95-9C41F7DF700A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Email"
+              DTS:DTSID="{7425E85F-60BF-4A3D-A5A0-F34FF740E0E1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="15"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PhoneNumber"
+              DTS:DTSID="{635513CD-CE21-4D42-9BFC-261BAE4AC076}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OrderQty"
+              DTS:DTSID="{4F0C05DD-40F4-4FEA-864A-95E544AFAFD0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ItemsSold"
+              DTS:DTSID="{17713C8E-3B6E-46D9-A727-44BE070265C6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SoldPrice"
+              DTS:DTSID="{F43097DD-AF88-4470-B7D2-0342CB0710FB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="40"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Country"
+              DTS:DTSID="{8CF50F64-3CDD-4F13-976C-137115282B4B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="40"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Region"
+              DTS:DTSID="{90D8F80B-299E-4DC0-8DD4-EE71DFCC9239}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[kancha.AdventureWorks2014]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{35D2DC4E-560E-4C93-9367-81F18F4A8861}"
+      DTS:ObjectName="kancha.AdventureWorks2014">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=kancha;Initial Catalog=AdventureWorks2014;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\PhoneBook Data"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{5B763426-39A1-46EE-83FE-07ADDBE71692}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="PhoneBook Data"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\PhoneBook Data\Input Flate file Phonebook Record"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Input Flate file Phonebook Record"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\PhoneBook Data\Input Flate file Phonebook Record.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].Columns[FirstName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].ExternalColumns[FirstName]"
+                      length="50"
+                      lineageId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].Columns[FirstName]"
+                      name="FirstName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].Columns[LastName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].ExternalColumns[LastName]"
+                      length="50"
+                      lineageId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].Columns[LastName]"
+                      name="LastName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].Columns[Address]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].ExternalColumns[Address]"
+                      length="50"
+                      lineageId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].Columns[Address]"
+                      name="Address"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].Columns[Email]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].ExternalColumns[Email]"
+                      length="50"
+                      lineageId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].Columns[Email]"
+                      name="Email"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].Columns[PhoneNumber]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].ExternalColumns[PhoneNumber]"
+                      length="15"
+                      lineageId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].Columns[PhoneNumber]"
+                      name="PhoneNumber"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].Columns[OrderQty]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].ExternalColumns[OrderQty]"
+                      lineageId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].Columns[OrderQty]"
+                      name="OrderQty"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].Columns[ItemsSold]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].ExternalColumns[ItemsSold]"
+                      lineageId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].Columns[ItemsSold]"
+                      name="ItemsSold"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].Columns[SoldPrice]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].ExternalColumns[SoldPrice]"
+                      lineageId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].Columns[SoldPrice]"
+                      name="SoldPrice"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].Columns[Country]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].ExternalColumns[Country]"
+                      length="40"
+                      lineageId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].Columns[Country]"
+                      name="Country"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].Columns[Region]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].ExternalColumns[Region]"
+                      length="40"
+                      lineageId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].Columns[Region]"
+                      name="Region"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].ExternalColumns[FirstName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="FirstName" />
+                    <externalMetadataColumn
+                      refId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].ExternalColumns[LastName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="LastName" />
+                    <externalMetadataColumn
+                      refId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].ExternalColumns[Address]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Address" />
+                    <externalMetadataColumn
+                      refId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].ExternalColumns[Email]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Email" />
+                    <externalMetadataColumn
+                      refId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].ExternalColumns[PhoneNumber]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="PhoneNumber" />
+                    <externalMetadataColumn
+                      refId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].ExternalColumns[OrderQty]"
+                      dataType="r4"
+                      name="OrderQty" />
+                    <externalMetadataColumn
+                      refId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].ExternalColumns[ItemsSold]"
+                      dataType="r4"
+                      name="ItemsSold" />
+                    <externalMetadataColumn
+                      refId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].ExternalColumns[SoldPrice]"
+                      dataType="r4"
+                      name="SoldPrice" />
+                    <externalMetadataColumn
+                      refId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].ExternalColumns[Country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="40"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].ExternalColumns[Region]"
+                      codePage="1252"
+                      dataType="str"
+                      length="40"
+                      name="Region" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\PhoneBook Data\Insert data to PhoneBook"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Insert data to PhoneBook"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT 
+      [FirstName]
+      ,[LastName]
+      ,[Address]
+      ,[Email]
+      ,[PhoneNumber]
+      ,[OrderQty]
+      ,[ItemsSold]
+      ,[SoldPrice]
+      ,[Country]
+      ,[Region]
+  FROm [dbo].[PhoneBook]</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\PhoneBook Data\Insert data to PhoneBook.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[kancha.AdventureWorks2014]"
+                  connectionManagerRefId="Package.ConnectionManagers[kancha.AdventureWorks2014]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\PhoneBook Data\Insert data to PhoneBook.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\PhoneBook Data\Insert data to PhoneBook.Inputs[OLE DB Destination Input].Columns[FirstName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="FirstName"
+                      externalMetadataColumnId="Package\PhoneBook Data\Insert data to PhoneBook.Inputs[OLE DB Destination Input].ExternalColumns[FirstName]"
+                      lineageId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].Columns[FirstName]" />
+                    <inputColumn
+                      refId="Package\PhoneBook Data\Insert data to PhoneBook.Inputs[OLE DB Destination Input].Columns[LastName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="LastName"
+                      externalMetadataColumnId="Package\PhoneBook Data\Insert data to PhoneBook.Inputs[OLE DB Destination Input].ExternalColumns[LastName]"
+                      lineageId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].Columns[LastName]" />
+                    <inputColumn
+                      refId="Package\PhoneBook Data\Insert data to PhoneBook.Inputs[OLE DB Destination Input].Columns[Address]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Address"
+                      externalMetadataColumnId="Package\PhoneBook Data\Insert data to PhoneBook.Inputs[OLE DB Destination Input].ExternalColumns[Address]"
+                      lineageId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].Columns[Address]" />
+                    <inputColumn
+                      refId="Package\PhoneBook Data\Insert data to PhoneBook.Inputs[OLE DB Destination Input].Columns[Email]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Email"
+                      externalMetadataColumnId="Package\PhoneBook Data\Insert data to PhoneBook.Inputs[OLE DB Destination Input].ExternalColumns[Email]"
+                      lineageId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].Columns[Email]" />
+                    <inputColumn
+                      refId="Package\PhoneBook Data\Insert data to PhoneBook.Inputs[OLE DB Destination Input].Columns[PhoneNumber]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="PhoneNumber"
+                      externalMetadataColumnId="Package\PhoneBook Data\Insert data to PhoneBook.Inputs[OLE DB Destination Input].ExternalColumns[PhoneNumber]"
+                      lineageId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].Columns[PhoneNumber]" />
+                    <inputColumn
+                      refId="Package\PhoneBook Data\Insert data to PhoneBook.Inputs[OLE DB Destination Input].Columns[OrderQty]"
+                      cachedDataType="i4"
+                      cachedName="OrderQty"
+                      externalMetadataColumnId="Package\PhoneBook Data\Insert data to PhoneBook.Inputs[OLE DB Destination Input].ExternalColumns[OrderQty]"
+                      lineageId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].Columns[OrderQty]" />
+                    <inputColumn
+                      refId="Package\PhoneBook Data\Insert data to PhoneBook.Inputs[OLE DB Destination Input].Columns[ItemsSold]"
+                      cachedDataType="i4"
+                      cachedName="ItemsSold"
+                      externalMetadataColumnId="Package\PhoneBook Data\Insert data to PhoneBook.Inputs[OLE DB Destination Input].ExternalColumns[ItemsSold]"
+                      lineageId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].Columns[ItemsSold]" />
+                    <inputColumn
+                      refId="Package\PhoneBook Data\Insert data to PhoneBook.Inputs[OLE DB Destination Input].Columns[SoldPrice]"
+                      cachedDataType="r4"
+                      cachedName="SoldPrice"
+                      externalMetadataColumnId="Package\PhoneBook Data\Insert data to PhoneBook.Inputs[OLE DB Destination Input].ExternalColumns[SoldPrice]"
+                      lineageId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].Columns[SoldPrice]" />
+                    <inputColumn
+                      refId="Package\PhoneBook Data\Insert data to PhoneBook.Inputs[OLE DB Destination Input].Columns[Country]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="40"
+                      cachedName="Country"
+                      externalMetadataColumnId="Package\PhoneBook Data\Insert data to PhoneBook.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      lineageId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].Columns[Country]" />
+                    <inputColumn
+                      refId="Package\PhoneBook Data\Insert data to PhoneBook.Inputs[OLE DB Destination Input].Columns[Region]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="40"
+                      cachedName="Region"
+                      externalMetadataColumnId="Package\PhoneBook Data\Insert data to PhoneBook.Inputs[OLE DB Destination Input].ExternalColumns[Region]"
+                      lineageId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output].Columns[Region]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\PhoneBook Data\Insert data to PhoneBook.Inputs[OLE DB Destination Input].ExternalColumns[FirstName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="FirstName" />
+                    <externalMetadataColumn
+                      refId="Package\PhoneBook Data\Insert data to PhoneBook.Inputs[OLE DB Destination Input].ExternalColumns[LastName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="LastName" />
+                    <externalMetadataColumn
+                      refId="Package\PhoneBook Data\Insert data to PhoneBook.Inputs[OLE DB Destination Input].ExternalColumns[Address]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Address" />
+                    <externalMetadataColumn
+                      refId="Package\PhoneBook Data\Insert data to PhoneBook.Inputs[OLE DB Destination Input].ExternalColumns[Email]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Email" />
+                    <externalMetadataColumn
+                      refId="Package\PhoneBook Data\Insert data to PhoneBook.Inputs[OLE DB Destination Input].ExternalColumns[PhoneNumber]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="PhoneNumber" />
+                    <externalMetadataColumn
+                      refId="Package\PhoneBook Data\Insert data to PhoneBook.Inputs[OLE DB Destination Input].ExternalColumns[OrderQty]"
+                      dataType="i4"
+                      name="OrderQty" />
+                    <externalMetadataColumn
+                      refId="Package\PhoneBook Data\Insert data to PhoneBook.Inputs[OLE DB Destination Input].ExternalColumns[ItemsSold]"
+                      dataType="i4"
+                      name="ItemsSold" />
+                    <externalMetadataColumn
+                      refId="Package\PhoneBook Data\Insert data to PhoneBook.Inputs[OLE DB Destination Input].ExternalColumns[SoldPrice]"
+                      dataType="r8"
+                      name="SoldPrice" />
+                    <externalMetadataColumn
+                      refId="Package\PhoneBook Data\Insert data to PhoneBook.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="40"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\PhoneBook Data\Insert data to PhoneBook.Inputs[OLE DB Destination Input].ExternalColumns[Region]"
+                      codePage="1252"
+                      dataType="str"
+                      length="40"
+                      name="Region" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\PhoneBook Data\Insert data to PhoneBook.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\PhoneBook Data\Insert data to PhoneBook.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\PhoneBook Data\Insert data to PhoneBook.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\PhoneBook Data\Insert data to PhoneBook.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\PhoneBook Data\Insert data to PhoneBook.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\PhoneBook Data\Insert data to PhoneBook.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\PhoneBook Data.Paths[Flat File Source Output]"
+              endId="Package\PhoneBook Data\Insert data to PhoneBook.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\PhoneBook Data\Input Flate file Phonebook Record.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql12">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="157.333333333334,42.6666666666667"
+          Id="Package\PhoneBook Data"
+          TopLeft="253.74999621883,24.2666662327449" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\PhoneBook Data">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="200,42.6666666666667"
+          Id="Package\PhoneBook Data\Insert data to PhoneBook"
+          TopLeft="276.515147394755,113.848482812715" />
+        <NodeLayout
+          Size="240,42.6666666666667"
+          Id="Package\PhoneBook Data\Input Flate file Phonebook Record"
+          TopLeft="304.16666213423,23.8333329071601" />
+        <EdgeLayout
+          Id="Package\PhoneBook Data.Paths[Flat File Source Output]"
+          TopLeft="424.16666213423,66.4999995738268">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-47.651514739475,47.3484832388883"
+              Start="0,0"
+              End="-47.651514739475,39.8484832388883">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.6742416194441" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.6742416194441"
+                    Point2="0,23.6742416194441"
+                    Point3="-4,23.6742416194441" />
+                  <mssgle:LineSegment
+                    End="-43.651514739475,23.6742416194441" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-43.651514739475,23.6742416194441"
+                    Point2="-47.651514739475,23.6742416194441"
+                    Point3="-47.651514739475,27.6742416194441" />
+                  <mssgle:LineSegment
+                    End="-47.651514739475,39.8484832388883" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\PhoneBook Data\Insert data to PhoneBook">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
